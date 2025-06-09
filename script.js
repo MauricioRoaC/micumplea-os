@@ -4,6 +4,16 @@ const sobreImg = document.getElementById("sobre-img");
 const mensaje = document.getElementById("mensaje"); // Asegúrate de que tenga la clase "mensaje-sobre"
 const musica = document.getElementById("bg-music");
 
+// Iniciar música al primer clic en cualquier parte
+document.addEventListener("click", () => {
+  if (musica && musica.paused) {
+    musica.play().catch(err => {
+      console.warn("No se pudo reproducir la música aún:", err);
+    });
+  }
+}, { once: true });
+
+
 let yaAbierto = false;
 
 abrirBtn.addEventListener("click", () => {
@@ -12,7 +22,7 @@ abrirBtn.addEventListener("click", () => {
   yaAbierto = true;
   abrirBtn.disabled = true; // deshabilita el botón
   abrirBtn.innerText = "❤️"; // cambia texto del botón (opcional)
-  sobreImg.src = "img/2.png";
+  sobreImg.src = "img/2.webp";
 
   const aleatoria = frases[Math.floor(Math.random() * frases.length)];
   mensaje.innerText = aleatoria;
