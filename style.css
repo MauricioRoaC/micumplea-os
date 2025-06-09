@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.sobre {
+  position: relative;
+  display: inline-block;
+}
+
+.sobre img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+}
+
+
+.mensaje-sobre {
+  position: absolute;
+  top: 40%; /* Puedes ajustar según la imagen */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-size: 1.4rem;
+  font-family: 'Pacifico', cursive;
+  color: #4b3b2b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+}
+
+#abrir-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: #b5f58f;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 15px;
+}
+
+#mensaje {
+  /* Ya no se usa, reemplazado por .mensaje-sobre */
+  display: none;
+}
+
+.corazones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  #abrir-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  #mensaje {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .mensaje-sobre {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
+
+
